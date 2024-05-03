@@ -1,7 +1,15 @@
 {
   "name": "koishi-plugin-symmetry",
-  "description": "生成对称图。",
+  "description": "Koishi 插件，用于生成对称图。",
   "version": "0.0.1",
+  "contributors": [
+    "TTsdzb <ttsdzb@outlook.com>"
+  ],
+  "homepage": "https://github.com/TTsdzb/koishi-plugin-symmetry",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TTsdzb/koishi-plugin-symmetry.git"
+  },
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -9,14 +17,30 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
     "plugin"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "koishi-plugin-canvas": "^0.2.2"
+  },
   "peerDependencies": {
     "koishi": "^4.17.5"
+  },
+  "koishi": {
+    "description": {
+      "zh": "生成给定图片的对称图。"
+    },
+    "service": {
+      "required": [
+        "canvas"
+      ],
+      "optional": [],
+      "implements": []
+    },
+    "locales": [
+      "zh"
+    ]
   }
 }

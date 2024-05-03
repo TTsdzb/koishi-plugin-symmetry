@@ -1,0 +1,8 @@
+commands:
+  symmetry:
+    description: 生成给定图片的对称图。
+    usage: |-
+      该指令接受一张图片。你可以在指令后附上图，也可以分成两条消息发送。
+    messages:
+      pleaseSendImage: 请发送图片。
+      jobCanceled: 您未发送图片，操作已取消。

@@ -2,7 +2,7 @@ import { Context, Schema, h } from "koishi";
 import {} from "koishi-plugin-canvas";
 
 export const name = "symmetry";
-export const inject = ["canvas"];
+export const inject = ["canvas", "http"];
 
 export interface Config {}
 

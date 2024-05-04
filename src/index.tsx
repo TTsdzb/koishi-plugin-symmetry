@@ -50,7 +50,13 @@ export function apply(ctx: Context) {
 
     await session.send(
       <>
-        {session.channel ? <at id={session.userId} /> : ""}
+        {session.channel ? (
+          <>
+            <at id={session.userId} />{" "}
+          </>
+        ) : (
+          ""
+        )}
         <i18n path=".pleaseSendImage" />
       </>
     );
@@ -60,7 +66,13 @@ export function apply(ctx: Context) {
 
     return (
       <>
-        {session.channel ? <at id={session.userId} /> : ""}
+        {session.channel ? (
+          <>
+            <at id={session.userId} />{" "}
+          </>
+        ) : (
+          ""
+        )}
         <i18n path=".jobCanceled" />
       </>
     );

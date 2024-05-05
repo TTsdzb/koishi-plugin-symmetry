@@ -8,7 +8,7 @@ export interface Config {}
 
 export const Config: Schema<Config> = Schema.object({});
 
-async function generate(ctx: Context, imageUrl: string) {
+async function generate(ctx: Context, imageUrl: string): Promise<h> {
   const image = await ctx.canvas.loadImage(imageUrl);
   const canvas = await ctx.canvas.createCanvas(
     image.naturalWidth,
@@ -30,11 +30,7 @@ async function generate(ctx: Context, imageUrl: string) {
     image.naturalHeight
   );
 
-  return (
-    <>
-      <img src={await canvas.toDataURL("image/png")} />
-    </>
-  );
+  return h.image(await canvas.toBuffer("image/png"), "image/png");
 }
 
 export function apply(ctx: Context) {
